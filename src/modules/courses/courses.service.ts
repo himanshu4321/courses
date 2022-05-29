@@ -10,7 +10,7 @@ export class CoursesService {
   }
 
   async getCourse(courseId: number) {
-    const course = this.courses.find(course => course.id == courseId);
+    const course = this.courses.find((course) => course.id == courseId);
     if (!course) {
       throw new HttpException('Course does not exist', 404);
     }
